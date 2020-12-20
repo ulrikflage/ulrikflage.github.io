@@ -1,317 +1,2649 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="XF" lang="en-US" dir="LTR"
+	data-app="public"
+	data-template="forum_list"
+	data-container-key=""
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="uf_"
+	data-csrf="1608472487,2032165c81349d20cc41d54ffd31719c"
+	class="has-no-js template-forum_list"
+	>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	<title>Ulrik Flage</title>
+
+		<meta name="description" content="Content" />
+		<meta property="og:description" content="Content" />
+		<meta property="twitter:description" content="Content" />
+
+		<link rel="canonical" href="https://ulrikwf.me/" />
+
+		<link rel="alternate" type="application/rss+xml" title="RSS feed for Ulrik Flage" href="/forums/-/index.rss" />
+
+	<meta property="og:site_name" content="Ulrik Flage" />
+
+	<meta property="og:type" content="website" />
+
+		<meta property="og:title" content="MrAntiFun" />
+		<meta property="twitter:title" content="MrAntiFun" />
+
+	<meta property="og:url" content="https://ulrikwf.me/" />
+
+		<meta name="theme-color" content="#171717" />
+
+	<link rel="preload" href="/styles/fonts/fa/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+
+	<link rel="preload" href="/styles/fonts/fa/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+<link rel="preload" href="/styles/fonts/fa/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="/css.php?css=public%3Anormalize.css%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=9&amp;l=1&amp;d=1570483551&amp;k=20bd97d137e2a52271865f174fcd941dcd42e09b" />
+
+	<link rel="stylesheet" href="/css.php?css=public%3Aeditor.less%2Cpublic%3Anode_list.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Asiropu_chat.less%2Cpublic%3Aextra.less&amp;s=9&amp;l=1&amp;d=1570483551&amp;k=70885b97792a5bda97c427c3ebc2c261743a082e" />
+
+		<script src="/js/xf/preamble.min.js?_v=6e2bbd35"></script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59754333-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-59754333-1', {
+			//
+
+				'cookie_domain': 'ulrikwf.me',
+
+
+		});
+	</script>
+
 </head>
 <body data-template="forum_list">
-    <div class="p-pageWrapper" id="top">
 
-        <header class="p-header" id="header">
-            <div class="p-header-inner">
-                <div class="p-header-content">
-                    <div class="p-header-logo p-header-logo--image">
-                        <a href="/">
-                            <img src="/styles/png/logo.png" alt="Ulrik, Forum">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
+<div class="p-pageWrapper" id="top">
 
-        <div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
-            <nav class="p-nav">
-                <div class="p-nav-inner">
-                    <a class="p-nav-menuTrigger" data-xf-click="off-canvas"
-                       data-menu=".js-headerOffCanvasMenu" role="button" tabindex="0">
-                        <i aria-hidden="true"></i>
-                        <span class="p-nav-menuText">Menu</span>
-                    </a>
-                    <div class="p-nav-smallLogo">
-                        <a href="/">
-                            <img src="/styles/png/logo.png" alt="Ulrik, Forum">
-                        </a>
-                    </div>
-                    <div class="p-nav-scroller hScroller" data-xf-init="h-scroller"
-                         data-auto-scroll=".p-navEl.is-selected">
-                        <div class="hScroller-scroll is-calculated" style="margin-bottom: -47px;">
-                            <ul class="p-nav-list js-offCanvasNavSource">
-                                <li>
-                                    <div class="p-navEl is-selected" data-has-children="true">
-                                        <a href="/" class="p-navEl-link p-navEl-link--splitMenu" data-nav-id="forums">
-                                            Forums</a>
-                                        <a data-xf-key="1" data-xf-click="menu" data-menu-pos-ref="< .p-navEl"
-                                           class="p-navEl-splitTrigger" role="button" tabindex="0"
-                                           aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
-                                        <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
-                                            <div class="menu-content">
-                                                <a href="/whats-new/posts/"
-                                                   class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
-                                                   data-nav-id="newPosts">New posts</a>
-                                                <a href="/search/?type=post"
-                                                   class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
-                                                   data-nav-id="searchForums">Search forums</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="/whats-new/" class="p-navEl-link p-navEl-link--splitMenu "
-                                       data-nav-id="whatsNew">What's new</a>
-                                    <a data-xf-key="2" data-xf-click="menu" data-menu-pos-ref="< .p-navEl"
-                                       class="p-navEl-splitTrigger" role="button" tabindex="0"
-                                       aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
-                                    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
-                                        <div class="menu-content">
-                                            <a href="/whats-new/posts/"
-                                               class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow"
-                                               data-nav-id="whatsNewPosts">New posts</a>
-                                            <a href="/whats-new/latest-activity"
-                                               class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow"
-                                               data-nav-id="latestActivity">Latest activity</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="p-navEl " data-has-children="true">
-                                        <a href="/members/" class="p-navEl-link p-navEl-link--splitMenu "
-                                           data-nav-id="members">Members</a>
-                                        <a data-xf-key="3" data-xf-click="menu" data-menu-pos-ref="< .p-navEl"
-                                           class="p-navEl-splitTrigger" role="button" tabindex="0"
-                                           aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
-                                        <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
-                                            <div class="menu-content">
-                                                <a href="/online/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
-                                                   data-nav-id="currentVisitors">Current visitors</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="p-navEl ">
-                                        <a href="/chat/" class="p-navEl-link " data-xf-key="4" data-nav-id="Chat">
-                                            <span class="badge badge--highlighted">0</span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="p-navEl ">
-                                        <a href="/list-of-all-trainers.503/"
-                                           class="p-navEl-link " data-xf-key="5" data-nav-id="Current_Trainers">
-                                            Trainers List</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="p-navEl ">
-                                        <a href="/forum-trainers-faq.305/" class="p-navEl-link " data-xf-key="6"
-                                           data-nav-id="faq">FAQ</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <i class="hScroller-action hScroller-action--end" aria-hidden="true"></i>
-                        <i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
-                    </div>
-                    <div class="p-nav-opposite">
-                        <div class="p-navgroup p-account p-navgroup--guest">
-                            <a href="/login/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
-                               data-xf-click="overlay" data-follow-redirects="on">
-                                <span class="p-navgroup-linkText">Log in</span>
-                            </a>
-                            <a href="/register/"
-                               class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
-                               data-xf-click="overlay" data-follow-redirects="on">
-                                <span class="p-navgroup-linkText">Register</span>
-                            </a>
+<header class="p-header" id="header">
+	<div class="p-header-inner">
+		<div class="p-header-content">
 
-                        </div>
-                        <div class="p-navgroup p-discovery">
-                            <a href="/whats-new/"
-                               class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
-                               aria-label="What's new" title="What's new">
-                                <i aria-hidden="true"></i>
-                                <span class="p-navgroup-linkText">What's new</span>
-                            </a>
-                            <a href="/search/"
-                               class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
-                               data-xf-click="menu" data-xf-key="/" aria-label="Search" aria-expanded="false"
-                               aria-haspopup="true" title="Search">
-                                <i aria-hidden="true"></i>
-                                <span class="p-navgroup-linkText">Search</span>
-                            </a>
-                            <div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
-                                <form action="/search/search" method="post" class="menu-content"
-                                      data-xf-init="quick-search">
-                                    <h3 class="menu-header">Search</h3>
-                                    <div class="menu-row">
-                                        <input type="text" class="input" name="keywords" placeholder="Search..."
-                                               aria-label="Search" data-menu-autofocus="true">
-                                    </div>
-                                    <div class="menu-row">
-                                        <label class="menu-row">
-                                            <input type="checkbox" name="c[title_only]" value="1">
-                                            <i aria-hidden="true"></i>
-                                            <span class="iconic-label">Search titles only</span>
-                                        </label>
-                                    </div>
-                                    <div class="menu-row">
-                                        <div class="inputGroup">
-                                            <span class="inputGroup-text" id="ctrl_search_menu_by_member">By:</span>
-                                            <input type="text" class="input" name="c[users]"
-                                                   data-xf-init="auto-complete" placeholder="Member"
-                                                   aria-labelledby="ctrl_search_menu_by_member" autocomplete="off">
-                                        </div>
-                                    </div>
-                                    <div class="menu-footer">
-                                        <span class="menu-footer-controls">
-                                            <button type="submit" class="button--primary button button--icon button--icon--search">
-                                                <span class="button-text">Search</span>
-                                            </button>
-                                            <a href="/search/" class="button">
-                                                <span class="button-text">Advanced search</span>
-                                            </a>
-                                        </span>
-                                    </div>
-                                    <input type="hidden" name="_xfToken"
-                                           value="1608476150,3b8c6a2f3f41ee2641c1a3d7a0979cff">
-                                </form>
-                            </div>
+			<div class="p-header-logo p-header-logo--image">
+				<a href="/">
+					<img src="/styles/gamezone/xenforo/logo.png"
+						alt="Ulrik Flage"
+						 />
+				</a>
+			</div>
 
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
 
-        <div class="p-sectionLinks">
-            <div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
-                <div class="hScroller-scroll is-calculated" style="margin-bottom-47px;">
-                    <ul class="p-sectionLinks-list">
-                        <li>
-                            <div class="p-navEl ">
-                                <a href="whats-new/posts/" class="p-navEl-link " data-xf-key="alt+1"
-                                   data-nav-id="newPosts">New Posts</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="p-navEl ">
-                                <a href="/search/?type=post" class="p-navEl-link " data-xf-key="alt+2"
-                                   data-nav-id="searchForums">Search forums</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <i class="hScroller-action hScroller-action--end" aria-hidden="true"></i>
-                <i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true"
-             data-ocm-builder="navigation">
-            <div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
-            <div class="offCanvasMenu-content">
-                <div class="offCanvasMenu-header">
-                    "
-			                    Menu
-                                "
-                    <a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0"
-                       aria-label="Close"></a>
+		</div>
+	</div>
 
-                </div>
-                <div class="p-offCanvasRegisterLink">
-                    <div class="offCanvasMenu-linkHolder">
-                        <a href="/login/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
-						                            Log in
-					                            </a>
-                    </div>
-                    <hr class="offCanvasMenu-separator">
-                    <div class="offCanvasMenu-linkHolder">
-                        <a href="/register/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
-							                            Register
-						                            </a>
+</header>
 
-                    </div>
-                    <hr class="offCanvasMenu-separator">
-                </div>
-                <div class="js-offCanvasNavTarget"></div>
-            </div>
-        </div>
+	<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
 
-        <div class="p-body">
-            <div class="p-body-inner">
-                <div class="p-body-header">
-                    <div class="p-title ">
-                        <h1 class="p-title-value">Ulrik, Forum</h1>
-                        <div class="p-title-pageAction">
-                            <a href="/whats-new/posts/" class="button button--icon button--icon--bolt">
-                                <span class="button-text">
-                                    "
-                                                    New Posts
-                                                "
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-body-main p-body-main--withSidebar">
+	<nav class="p-nav">
+		<div class="p-nav-inner">
+			<a class="p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" role="button" tabindex="0">
+				<i aria-hidden="true"></i>
+				<span class="p-nav-menuText">Menu</span>
+			</a>
 
-                    <div class="p-body-content">
+			<div class="p-nav-smallLogo">
+				<a href="/">
+					<img src="/styles/gamezone/xenforo/logo.png"
+						alt="Ulrik Flage"
+					 />
+				</a>
+			</div>
 
-                        <div class="p-body-pageContent">
-                            <div id="Chat" class="block chatAboveForumList" data-active="false" data-xf-init="chat">
-                                <div class="block-container">
-                                    <div id="chatHeader" class="block-header"></div>
-                                    <div id="chatContent"></div>
-                                    <div id="chatEditor"></div>
-                                </div>
-                            </div>
-                            <div class="block block--category block--category1">
-                                <span class="u-anchorTarget" id="main--category1"></span>
-                                <div class="block-container">
+			<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+				<div class="hScroller-scroll">
+					<ul class="p-nav-list js-offCanvasNavSource">
 
-                                    <h2 class="block-header">
-                                        <a href="/.#main-category1">Main Category</a>
-                                    </h2>
+						<li>
 
-                                    <div class="block-body">
-                                        <div class="node node--id2 node--depth2 node--forum">
-                                            <div class="block-body">
-                                                <span class="node-icon" aria-hidden="true"><i>::before</i></span>
-                                                <div class="node-main js-nodeMain">
-                                                    <h3 class="node-title">
-                                                        <a href="/forums/Trainers.2" data-xf-init="element-tooltip"
-                                                   data-shortcut="node-description" id="js-XFUniqueID53">
-                                                    Trainers
-                                                        </a>
-                                                    </h3>
-                                                    <div class="node-description node-description--tooltip js-nodeDescTooltip">
-                                                Trainers which are made by Ulrik
-                                                    </div>
-                                                    <div class="node-meta">
-                                                        <div class="node-statsMeta"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block block--category block--category7">
-                                <span class="u-anchorTarget" id="general-category.7"></span>
-                                <div class="block-container">
-                                    <h2 class="block-header">
-                                        <a href="/.#general-category.7">General Category</a>
-                                    </h2>
-                                    <div class="block-body">
+	<div class="p-navEl is-selected" data-has-children="true">
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<a href="/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+
+
+		data-nav-id="forums">Forums</a>
+
+			<a data-xf-key="1"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+
+	<a href="/whats-new/posts/"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+
+
+		data-nav-id="newPosts">New posts</a>
+
+	<a href="/search/?type=post"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+
+
+		data-nav-id="searchForums">Search forums</a>
+
+				</div>
+			</div>
+
+	</div>
+
+						</li>
+
+						<li>
+
+	<div class="p-navEl " data-has-children="true">
+
+	<a href="/whats-new/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+
+
+		data-nav-id="whatsNew">What's new</a>
+
+
+			<a data-xf-key="2"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+
+	<a href="/whats-new/posts/"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		 rel="nofollow"
+
+		data-nav-id="whatsNewPosts">New posts</a>
+
+	<a href="/whats-new/latest-activity"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		 rel="nofollow"
+
+		data-nav-id="latestActivity">Latest activity</a>
+
+				</div>
+			</div>
+
+	</div>
+
+						</li>
+
+						<li>
+
+	<div class="p-navEl " data-has-children="true">
+
+	<a href="/members/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+
+
+		data-nav-id="members">Members</a>
+
+
+			<a data-xf-key="3"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+
+	<a href="/online/"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+
+
+		data-nav-id="currentVisitors">Current visitors</a>
+
+				</div>
+			</div>
+
+	</div>
+
+						</li>
+
+						<li>
+
+	<div class="p-navEl " >
+
+	<a href="/chat/"
+		class="p-navEl-link "
+
+		data-xf-key="4"
+		data-nav-id="siropuChat">Chat <span class="badge badge--highlighted">0</span></a>
+
+	</div>
+
+						</li>
+
+						<li>
+
+	<div class="p-navEl " >
+
+	<a href="https://ulrikwf.me/index.php?threads/list-of-all-trainers.503/"
+		class="p-navEl-link "
+
+		data-xf-key="5"
+		data-nav-id="Current_Trainers">Trainers List</a>
+
+	</div>
+
+						</li>
+
+						<li>
+
+	<div class="p-navEl " >
+
+	<a href="https://ulrikwf.me/index.php?threads/forums-trainers-faq.305/"
+		class="p-navEl-link "
+
+		data-xf-key="6"
+		data-nav-id="faq">FAQ</a>
+
+	</div>
+
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="p-nav-opposite">
+				<div class="p-navgroup p-account p-navgroup--guest">
+
+						<a href="/login/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+							data-xf-click="overlay" data-follow-redirects="on">
+							<span class="p-navgroup-linkText">Log in</span>
+						</a>
+
+							<a href="/register/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Register</span>
+							</a>
+
+				</div>
+
+				<div class="p-navgroup p-discovery">
+					<a href="/whats-new/"
+						class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+						aria-label="What&#039;s new"
+						title="What&#039;s new">
+						<i aria-hidden="true"></i>
+						<span class="p-navgroup-linkText">What's new</span>
+					</a>
+
+
+						<a href="/search/"
+							class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+							data-xf-click="menu"
+							data-xf-key="/"
+							aria-label="Search"
+							aria-expanded="false"
+							aria-haspopup="true"
+							title="Search">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Search</span>
+						</a>
+						<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+							<form action="/search/search" method="post"
+								class="menu-content"
+								data-xf-init="quick-search">
+
+								<h3 class="menu-header">Search</h3>
+
+								<div class="menu-row">
+
+										<input type="text" class="input" name="keywords" placeholder="Search…" aria-label="Search" data-menu-autofocus="true" />
+
+								</div>
+
+
+								<div class="menu-row">
+									<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Search titles only</span></label>
+
+								</div>
+
+								<div class="menu-row">
+									<div class="inputGroup">
+										<span class="inputGroup-text" id="ctrl_search_menu_by_member">By:</span>
+										<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Member" aria-labelledby="ctrl_search_menu_by_member" />
+									</div>
+								</div>
+								<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button--primary button button--icon button--icon--search"><span class="button-text">Search</span></button>
+										<a href="/search/" class="button"><span class="button-text">Advanced search…</span></a>
+									</span>
+								</div>
+
+								<input type="hidden" name="_xfToken" value="1608472487,2032165c81349d20cc41d54ffd31719c" />
+							</form>
+						</div>
+
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	</div>
+
+
+		<div class="p-sectionLinks">
+			<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll">
+					<ul class="p-sectionLinks-list">
+
+						<li>
+
+	<div class="p-navEl " >
+
+	<a href="/whats-new/posts/"
+		class="p-navEl-link "
+
+		data-xf-key="alt+1"
+		data-nav-id="newPosts">New posts</a>
+
+	</div>
+
+						</li>
+
+						<li>
+
+	<div class="p-navEl " >
+
+	<a href="/search/?type=post"
+		class="p-navEl-link "
+
+		data-xf-key="alt+2"
+		data-nav-id="searchForums">Search forums</a>
+
+	</div>
+
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+	<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+	<div class="offCanvasMenu-content">
+		<div class="offCanvasMenu-header">
+			Menu
+			<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Close"></a>
+		</div>
+
+			<div class="p-offCanvasRegisterLink">
+				<div class="offCanvasMenu-linkHolder">
+					<a href="/login/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+						Log in
+					</a>
+				</div>
+				<hr class="offCanvasMenu-separator" />
+
+					<div class="offCanvasMenu-linkHolder">
+						<a href="/register/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Register
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+
+			</div>
+
+		<div class="js-offCanvasNavTarget"></div>
+	</div>
+</div>
+
+<div class="p-body">
+	<div class="p-body-inner">
+		<!--XF:EXTRA_OUTPUT-->
+
+	<p><a href="https://ulrikwf.me/threads/mrantifun-wemod-partnership-announcement.19907/">MrAntiFun + WeMod Partnership Announcement</a></p>
+
+	<noscript><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding.</div></noscript>
+
+
+	<!--[if lt IE 9]><div class="blockMessage blockMessage&#45;&#45;important blockMessage&#45;&#45;iconic">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</div><![endif]-->
+
+
+
+			<div class="p-body-header">
+
+
+					<div class="p-title ">
+
+
+							<h1 class="p-title-value">Ulrik Flage</h1>
+
+
+							<div class="p-title-pageAction">
+
+		<a href="/whats-new/posts/" class="button button--icon button--icon--bolt"><span class="button-text">
+			New posts
+		</span></a>
+
+</div>
+
+					</div>
+
+			</div>
+
+		<div class="p-body-main p-body-main--withSidebar ">
+
+			<div class="p-body-content">
+
+<div class="p-body-pageContent">
+
+<div id="siropuChat" class="block siropuChatAboveForumList" data-active="false" data-xf-init="siropu-chat">
+	<div class="block-container">
+		<div id="siropuChatHeader" class="block-header">
+			<i class="fa--xf far fa-comments" aria-hidden="true"></i> <span>
+
+		General chit-chat For Donors
+
+</span>
+			<div id="siropuChatOptions">
+
+				<a href="/chat/help" title="Help" data-xf-click="overlay"><i class="fa--xf fal fa-life-ring" aria-hidden="true"></i> <span>Help</span></a>
+				<a role="button" id="siropuChatToggleUsers" title="Users" data-xf-click="siropu-chat-toggle-users"><i class="fa--xf fal fa-users" aria-hidden="true"></i> <span>Users</span></a>
+
+				<div class="menu" data-menu="menu" aria-hidden="true">
+					<div class="menu-content">
+						<form id="siropuChatSettings">
+							<h4 class="menu-tabHeader tabs" data-xf-init="tabs" role="tablist">
+								<span class="hScroller" data-xf-init="h-scroller">
+									<span class="hScroller-scroll">
+										<a class="tabs-tab is-active" role="tab" tabindex="0" aria-controls="_xfUid-siropuChatMisc-1608472487"><i class="fa--xf fal fa-wrench" aria-hidden="true"></i> Settings</a>
+										<a class="tabs-tab" role="tab" tabindex="0" aria-controls="_xfUid-siropuChatNotifications-1608472487"><i class="fa--xf fal fa-bell" aria-hidden="true"></i> Notifications</a>
+									</span>
+								</span>
+							</h4>
+							<ul class="tabPanes">
+								<li class="is-active" role="tabpanel" id="_xfUid-siropuChatMisc-1608472487">
+									<fieldset>
+										<legend data-xf-click="siropu-chat-toggle-options">Miscellaneous</legend>
+
+			<ul class="inputChoices">
+				<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="inverse" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Inverse message direction</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="editor_on_top" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Display editor on top</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="maximized" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Enable maximized mode</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="image_as_link" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Display images as links</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="hide_bot" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Hide bot messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="hide_status" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Hide statuses</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="hide_chatters" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Hide chatter list</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="show_ignored" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Show messages from ignored users</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="disable" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Disable chat</span></label></li>
+
+			</ul>
+
+									</fieldset>
+
+
+								</li>
+								<li role="tabpanel" id="_xfUid-siropuChatNotifications-1608472487">
+
+										<fieldset>
+
+			<ul class="inputChoices">
+				<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="mention_alert" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Receive mention alerts</span></label></li>
+
+			</ul>
+
+										</fieldset>
+
+									<fieldset>
+										<legend data-xf-click="siropu-chat-toggle-options">Sound notifications</legend>
+
+			<ul class="inputChoices">
+				<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="sound[normal]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Normal messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="sound[private]" value="1" checked="1" /><i aria-hidden="true"></i><span class="iconic-label">Private messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="sound[whisper]" value="1" checked="1" /><i aria-hidden="true"></i><span class="iconic-label">Whisper messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="sound[mention]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Mention messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="sound[bot]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Bot messages</span></label></li>
+
+			</ul>
+
+									</fieldset>
+									<fieldset>
+										<legend data-xf-click="siropu-chat-toggle-options">Desktop notifications</legend>
+
+			<ul class="inputChoices">
+				<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="notification[normal]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Normal messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="notification[private]" value="1" checked="1" /><i aria-hidden="true"></i><span class="iconic-label">Private messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="notification[whisper]" value="1" checked="1" /><i aria-hidden="true"></i><span class="iconic-label">Whisper messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="notification[mention]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Mention messages</span></label></li>
+<li class="inputChoices-choice"><label class="iconic"><input type="checkbox"  name="notification[bot]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Bot messages</span></label></li>
+
+			</ul>
+
+									</fieldset>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+				<a role="button" title="Options" data-xf-click="menu" aria-expanded="false" aria-haspopup="true"><i class="fa--xf far fa-bars" aria-hidden="true"></i> <span>Options</span></a>
+				<div class="menu" data-menu="menu" aria-hidden="true">
+					<div class="menu-content">
+						<h3 class="menu-header">Options</h3>
+
+
+
+
+
+
+
+
+
+						<div class="menu-footer menu-footer--split">
+
+
+								<span class="menu-footer-opposite">
+									<a href="/chat/fullpage" data-xf-click="siropu-chat-popup"><i class="fa--xf far fa-external-link-alt" aria-hidden="true"></i> Open in popup</a>
+								</span>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="siropuChatContent">
+
+
+
+						<ul class="siropuChatRoom siropuChatUsers" data-room-id="1" style="display: block;">
+
+
+		<li class="siropuChatNoRoomUsers">No one is chatting at the moment.</li>
+
+
+						</ul>
+						<ul class="siropuChatRoom siropuChatMessages" data-room-id="1" data-autoscroll="1" style="display: block;">
+
+
+		<li id="rm-15369" class="siropuChatMessageRow siropuChatForumActivity" data-id="15369" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+
+
+
+
+
+
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+
+
+
+
+			Chat Bot:
+
+
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition-trainer.21779/" class="link link--internal">DRAGON QUEST XI S: Echoes of an Elusive Age - Definitive Edition Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-05T19:55:40+0200" data-time="1607190940" data-date-string="Dec 5, 2020" data-time-string="7:55 PM" title="Dec 5, 2020 at 7:55 PM">Dec 5, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15370" class="siropuChatMessageRow siropuChatForumActivity" data-id="15370" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+
+
+
+
+
+
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+
+
+
+
+			Chat Bot:
+
+
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/aarklash-legacy-trainer.21782/" class="link link--internal">Aarklash: Legacy Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-06T00:29:11+0200" data-time="1607207351" data-date-string="Dec 6, 2020" data-time-string="12:29 AM" title="Dec 6, 2020 at 12:29 AM">Dec 6, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15371" class="siropuChatMessageRow siropuChatForumActivity" data-id="15371" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+
+
+
+
+
+
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+
+
+
+
+			Chat Bot:
+
+
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/abandon-ship-trainer.21783/" class="link link--internal">Abandon Ship Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-06T00:41:17+0200" data-time="1607208077" data-date-string="Dec 6, 2020" data-time-string="12:41 AM" title="Dec 6, 2020 at 12:41 AM">Dec 6, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15372" class="siropuChatMessageRow siropuChatForumActivity" data-id="15372" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+
+
+
+
+
+
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+
+
+
+
+			Chat Bot:
+
+
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/abyss-odyssey-trainer.21784/" class="link link--internal">Abyss Odyssey Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-06T00:53:12+0200" data-time="1607208792" data-date-string="Dec 6, 2020" data-time-string="12:53 AM" title="Dec 6, 2020 at 12:53 AM">Dec 6, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15373" class="siropuChatMessageRow siropuChatForumActivity" data-id="15373" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+			Chat Bot:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/ace-combat-assault-horizon-enhanced-edition-trainer.21785/" class="link link--internal">Ace Combat Assault Horizon - Enhanced Edition Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-06T02:05:49+0200" data-time="1607213149" data-date-string="Dec 6, 2020" data-time-string="2:05 AM" title="Dec 6, 2020 at 2:05 AM">Dec 6, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15374" class="siropuChatMessageRow" data-id="15374" data-user-id="311909">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/dannyyee888.311909/" class="avatar avatar--xxs" data-user-id="311909" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/311/311909.jpg?1417020838"  alt="dannyyee888" class="avatar-u311909-s" itemprop="image" />
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+				<a href="/members/dannyyee888.311909/" class="username " dir="auto" data-user-id="311909" data-xf-init="member-tooltip"><span class="username--style7">dannyyee888</span></a>:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">morning sir..adm..mr chris..maf</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-06T05:30:34+0200" data-time="1607225434" data-date-string="Dec 6, 2020" data-time-string="5:30 AM" title="Dec 6, 2020 at 5:30 AM">Dec 6, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15375" class="siropuChatMessageRow" data-id="15375" data-user-id="311909">
+	<div class="siropuChatMessageContentLeft">
+
+
+			<a href="/members/dannyyee888.311909/" class="avatar avatar--xxs" data-user-id="311909" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/311/311909.jpg?1417020838"  alt="dannyyee888" class="avatar-u311909-s" itemprop="image" />
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+				<a href="/members/dannyyee888.311909/" class="username " dir="auto" data-user-id="311909" data-xf-init="member-tooltip"><span class="username--style7">dannyyee888</span></a>:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">hi maf can you help on game SUZERIN..MAF..hope sir can give wealth and resources ..only sir</div></span>
+
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-06T05:31:43+0200" data-time="1607225503" data-date-string="Dec 6, 2020" data-time-string="5:31 AM" title="Dec 6, 2020 at 5:31 AM">Dec 6, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15376" class="siropuChatMessageRow siropuChatForumActivity" data-id="15376" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+			Chat Bot:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/haydee-2-trainer.21787/" class="link link--internal">Haydee 2 Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-06T13:39:49+0200" data-time="1607254789" data-date-string="Dec 6, 2020" data-time-string="1:39 PM" title="Dec 6, 2020 at 1:39 PM">Dec 6, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15377" class="siropuChatMessageRow" data-id="15377" data-user-id="357616">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/murky.357616/" class="avatar avatar--xxs" data-user-id="357616" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/357/357616.jpg?1440763328"  alt="Murky" class="avatar-u357616-s" itemprop="image" />
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+				<a href="/members/murky.357616/" class="username " dir="auto" data-user-id="357616" data-xf-init="member-tooltip"><span class="username--style7">Murky</span></a>:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">HI <a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="@MrAntiFun">@MrAntiFun</a> can you update Dawn of Man to versions 1.7.1?</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-06T21:39:50+0200" data-time="1607283590" data-date-string="Dec 6, 2020" data-time-string="9:39 PM" title="Dec 6, 2020 at 9:39 PM">Dec 6, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15378" class="siropuChatMessageRow siropuChatForumActivity" data-id="15378" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+			Chat Bot:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/project-wingman-trainer.21789/" class="link link--internal">Project Wingman Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-07T07:45:55+0200" data-time="1607319955" data-date-string="Dec 7, 2020" data-time-string="7:45 AM" title="Dec 7, 2020 at 7:45 AM">Dec 7, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15379" class="siropuChatMessageRow siropuChatForumActivity" data-id="15379" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+			Chat Bot:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/mars-horizon-trainer.21796/" class="link link--internal">Mars Horizon Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-08T18:41:11+0200" data-time="1607445671" data-date-string="Dec 8, 2020" data-time-string="6:41 PM" title="Dec 8, 2020 at 6:41 PM">Dec 8, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15380" class="siropuChatMessageRow" data-id="15380" data-user-id="1729662">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/ankiplank.1729662/" class="avatar avatar--xxs" data-user-id="1729662" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/1729/1729662.jpg?1599211212"  alt="Ankiplank" class="avatar-u1729662-s" itemprop="image" />
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+				<a href="/members/ankiplank.1729662/" class="username " dir="auto" data-user-id="1729662" data-xf-init="member-tooltip"><span class="username--style7">Ankiplank</span></a>:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">The long dark has been updated</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-09T10:47:36+0200" data-time="1607503656" data-date-string="Dec 9, 2020" data-time-string="10:47 AM" title="Dec 9, 2020 at 10:47 AM">Dec 9, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15381" class="siropuChatMessageRow" data-id="15381" data-user-id="41920">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/d97.41920/" class="avatar avatar--xxs avatar--default avatar--default--dynamic" data-user-id="41920" data-xf-init="member-tooltip" style="background-color: #9933cc; color: #e0c2f0">
+			<span class="avatar-u41920-s">D</span>
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+				<a href="/members/d97.41920/" class="username " dir="auto" data-user-id="41920" data-xf-init="member-tooltip"><span class="username--style7">d97</span></a>:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">Hey <a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="@MrAntiFun">@MrAntiFun</a> cyberpunk 2077 has come out and I know you have plans to make a trainer just a reminder</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-10T06:09:36+0200" data-time="1607573376" data-date-string="Dec 10, 2020" data-time-string="6:09 AM" title="Dec 10, 2020 at 6:09 AM">Dec 10, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15383" class="siropuChatMessageRow" data-id="15383" data-user-id="311909">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/dannyyee888.311909/" class="avatar avatar--xxs" data-user-id="311909" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/311/311909.jpg?1417020838"  alt="dannyyee888" class="avatar-u311909-s" itemprop="image" />
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+				<a href="/members/dannyyee888.311909/" class="username " dir="auto" data-user-id="311909" data-xf-init="member-tooltip"><span class="username--style7">dannyyee888</span></a>:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">hi morning great maf ..adm..chris..and everybody..could maf do a trainer for suzerain pls or strategic minds sphere of communisme..thanks</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-11T00:18:45+0200" data-time="1607638725" data-date-string="Dec 11, 2020" data-time-string="12:18 AM" title="Dec 11, 2020 at 12:18 AM">Dec 11, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15384" class="siropuChatMessageRow" data-id="15384" data-user-id="311909">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/dannyyee888.311909/" class="avatar avatar--xxs" data-user-id="311909" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/311/311909.jpg?1417020838"  alt="dannyyee888" class="avatar-u311909-s" itemprop="image" />
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+				<a href="/members/dannyyee888.311909/" class="username " dir="auto" data-user-id="311909" data-xf-init="member-tooltip"><span class="username--style7">dannyyee888</span></a>:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">hi sir maf..wonder if you can do an update for phoenix point plz..new dlc just in..thanks</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-11T16:56:28+0200" data-time="1607698588" data-date-string="Dec 11, 2020" data-time-string="4:56 PM" title="Dec 11, 2020 at 4:56 PM">Dec 11, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15385" class="siropuChatMessageRow siropuChatForumActivity" data-id="15385" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+			Chat Bot:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/per-aspera-trainer.21804/" class="link link--internal">Per Aspera Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-12T00:25:22+0200" data-time="1607725522" data-date-string="Dec 12, 2020" data-time-string="12:25 AM" title="Dec 12, 2020 at 12:25 AM">Dec 12, 2020</time>
+	</div>
+</li>
+
+		<li id="rm-15386" class="siropuChatMessageRow" data-id="15386" data-user-id="1729662">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/ankiplank.1729662/" class="avatar avatar--xxs" data-user-id="1729662" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/1729/1729662.jpg?1599211212"  alt="Ankiplank" class="avatar-u1729662-s" itemprop="image" />
+		</a>
+
+
+
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+
+
+				<a href="/members/ankiplank.1729662/" class="username " dir="auto" data-user-id="1729662" data-xf-init="member-tooltip"><span class="username--style7">Ankiplank</span></a>:
+
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">hi from sweden,cant sleep. my cats talk a lot and want out in the cold, can not see why. so now I sit and wait for the update for the long dark and if there is a possibility to make a trainer for kingdoms reborn =) thank u</div></span>
+
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-15T01:11:10+0200" data-time="1607987470" data-date-string="Dec 15, 2020" data-time-string="1:11 AM" title="Dec 15, 2020 at 1:11 AM">Tuesday at 1:11 AM</time>
+	</div>
+</li>
+
+		<li id="rm-15387" class="siropuChatMessageRow siropuChatForumActivity" data-id="15387" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+			Chat Bot:
+
+
+
+	<span class="siropuChatMessageText">
+        <div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/phoenix-point-year-one-edition-trainer.21816/" class="link link--internal">Phoenix Point: Year One Edition Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-16T08:39:10+0200" data-time="1608100750" data-date-string="Dec 16, 2020" data-time-string="8:39 AM" title="Dec 16, 2020 at 8:39 AM">Wednesday at 8:39 AM</time>
+	</div>
+</li>
+
+		<li id="rm-15388" class="siropuChatMessageRow siropuChatForumActivity" data-id="15388" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+
+
+
+
+			Chat Bot:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/last-epoch-trainer.21819/" class="link link--internal">Last Epoch Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-16T16:06:23+0200" data-time="1608127583" data-date-string="Dec 16, 2020" data-time-string="4:06 PM" title="Dec 16, 2020 at 4:06 PM">Wednesday at 4:06 PM</time>
+	</div>
+</li>
+
+		<li id="rm-15389" class="siropuChatMessageRow" data-id="15389" data-user-id="585369">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/aabw.585369/" class="avatar avatar--xxs" data-user-id="585369" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/585/585369.jpg?1501079124"  alt="aabw" class="avatar-u585369-s" itemprop="image" />
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+				<a href="/members/aabw.585369/" class="username " dir="auto" data-user-id="585369" data-xf-init="member-tooltip"><span class="username--style7">aabw</span></a>:
+	<span class="siropuChatMessageText"><div class="bbWrapper">cyberpunk trainer have many problem, cant kill any enemy</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-16T16:50:35+0200" data-time="1608130235" data-date-string="Dec 16, 2020" data-time-string="4:50 PM" title="Dec 16, 2020 at 4:50 PM">Wednesday at 4:50 PM</time>
+	</div>
+</li>
+
+		<li id="rm-15390" class="siropuChatMessageRow siropuChatForumActivity" data-id="15390" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+			Chat Bot:
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/beamng-drive-trainer.21820/" class="link link--internal">BeamNG.drive Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-16T17:21:49+0200" data-time="1608132109" data-date-string="Dec 16, 2020" data-time-string="5:21 PM" title="Dec 16, 2020 at 5:21 PM">Wednesday at 5:21 PM</time>
+	</div>
+</li>
+
+		<li id="rm-15391" class="siropuChatMessageRow" data-id="15391" data-user-id="311909">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/dannyyee888.311909/" class="avatar avatar--xxs" data-user-id="311909" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/311/311909.jpg?1417020838"  alt="dannyyee888" class="avatar-u311909-s" itemprop="image" />
+		</a>
+
+		<a role="button" class="siropuChatTag" title="Tag user">@</a>
+
+
+
+				<a href="/members/dannyyee888.311909/" class="username " dir="auto" data-user-id="311909" data-xf-init="member-tooltip"><span class="username--style7">dannyyee888</span></a>:
+
+
+	<span class="siropuChatMessageText"><div class="bbWrapper">hi morning sir MAF..sir the game star renegades ,a need of trainer sir..any possible of it sir..thanks</div></span>
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-18T06:26:49+0200" data-time="1608265609" data-date-string="Dec 18, 2020" data-time-string="6:26 AM" title="Dec 18, 2020 at 6:26 AM">Friday at 6:26 AM</time>
+	</div>
+</li>
+
+		<li id="rm-15392" class="siropuChatMessageRow siropuChatForumActivity" data-id="15392" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+			Chat Bot:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/godhood-trainer.21824/" class="link link--internal">Godhood Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-18T21:49:57+0200" data-time="1608320997" data-date-string="Dec 18, 2020" data-time-string="9:49 PM" title="Dec 18, 2020 at 9:49 PM">Friday at 9:49 PM</time>
+	</div>
+</li>
+
+		<li id="rm-15393" class="siropuChatMessageRow siropuChatForumActivity" data-id="15393" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+
+
+
+
+			Chat Bot:
+
+
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/synthetik-trainer.21827/" class="link link--internal">Synthetik Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-20T00:39:54+0200" data-time="1608417594" data-date-string="Dec 20, 2020" data-time-string="12:39 AM" title="Dec 20, 2020 at 12:39 AM">Today at 12:39 AM</time>
+	</div>
+</li>
+
+		<li id="rm-15394" class="siropuChatMessageRow siropuChatForumActivity" data-id="15394" data-user-id="1">
+	<div class="siropuChatMessageContentLeft">
+
+			<a href="/members/mrantifun.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/0/1.jpg?1493654589"  alt="MrAntiFun" class="avatar-u1-s" itemprop="image" />
+		</a>
+
+
+
+
+
+			Chat Bot:
+
+	<span class="siropuChatMessageText"><div class="bbWrapper"><a href="https://mrantifun.net/members/1/" class="username" data-xf-init="member-tooltip" data-user-id="1" data-username="MrAntiFun">MrAntiFun</a> has started a new thread called &quot;<a href="https://mrantifun.net/threads/planet-zoo-trainer.21828/" class="link link--internal">Planet Zoo Trainer</a>&quot; in <a href="https://mrantifun.net/forums/trainers.2/" class="link link--internal">Trainers</a>.</div></span>
+
+	</div>
+	<div class="siropuChatMessageContentRight">
+
+		<time  class="siropuChatDateTime u-dt" dir="auto" datetime="2020-12-20T00:39:59+0200" data-time="1608417599" data-date-string="Dec 20, 2020" data-time-string="12:39 AM" title="Dec 20, 2020 at 12:39 AM">Today at 12:39 AM</time>
+	</div>
+</li>
+                        </ul>
+
+			<ul id="siropuChatRooms"></ul>
+
+		</div>
+
+			<div id="siropuChatEditor">
+
+	<form data-xf-init="siropu-chat-form" data-multi-line="false">
+
+			<dl class="formRow formRow--input formRow--fullWidth formRow--noLabel">
+				<dt>
+					<div class="formRow-labelWrapper"></div>
+				</dt>
+				<dd>
+
+	<script class="js-editorToolbars" type="application/json">{"toolbarButtons":["clearFormatting","-vs","bold","italic","underline","strikeThrough","-vs","color","fontFamily","fontSize","-vs","insertLink","insertImage","insertVideo","xfSmilie","xfInsert","-vs","align","xfList","insertTable","-vs","undo","redo","-vs","xfDraft","xfBbCode","xfCustom_chat"],"toolbarButtonsMD":["clearFormatting","-vs","bold","italic","underline","strikeThrough","-vs","color","fontFamily","fontSize","-vs","insertLink","insertImage","insertVideo","xfSmilie","xfInsert","-vs","align","xfList","insertTable","-vs","undo","redo","-vs","xfDraft","xfBbCode"],"toolbarButtonsSM":["clearFormatting","-vs","bold","italic","underline","strikeThrough","-vs","color","fontFamily","fontSize","-vs","insertLink","insertImage","insertVideo","xfSmilie","xfInsert","-vs","align","xfList","insertTable","-vs","undo","redo","-vs","xfDraft","xfBbCode"],"toolbarButtonsXS":["clearFormatting","-vs","bold","italic","underline","-vs","color","fontSize","-vs","insertLink","insertImage","insertVideo","xfSmilie","xfInsert","-vs","align","xfList","insertTable","-vs","undo","redo","-vs","xfBbCode"]}</script>
+	<script class="js-editorDropdowns" type="application/json">{"xfInsert":{"cmd":"xfInsert","icon":"fa-ellipsis-h","buttons":["xfMedia","xfQuote","xfSpoiler","xfInlineSpoiler","xfCode","xfInlineCode"],"title":"Insert"},"xfList":{"cmd":"xfList","icon":"fa-list","buttons":["formatOL","formatUL","indent","outdent"],"title":"List"}}</script>
+
+	<script class="js-editorLanguage" type="application/json">
+		{
+			"Align Center": "Align center",
+			"Align Left": "Align left",
+			"Align Right": "Align right",
+			"Align": "Alignment",
+			"Alignment": "Alignment",
+			"Back": "Back",
+			"Bold": "Bold",
+			"By URL": "By URL",
+			"Clear Formatting": "Remove formatting",
+			"Code": "Code",
+			"Colors": "Text color",
+			"Decrease Indent": "Outdent",
+			"Delete Draft": "Delete draft",
+			"Drafts": "Drafts",
+			"Drop image": "Drop image",
+			"Drop video": "Drop video",
+			"Edit Link": "Edit link",
+			"Font Family": "Font family",
+			"Font Size": "Font size",
+			"Increase Indent": "Indent",
+			"Inline Code": "Inline code",
+			"Inline Spoiler": "Inline spoiler",
+			"Insert Image": "Insert image",
+			"Insert Link": "Insert link",
+			"Insert": "Insert",
+			"Italic": "Italic",
+			"List": "List",
+			"Loading image": "Loading image",
+			"Media": "Media",
+			"Open Link": "Open link",
+			"or click": "Or click here",
+			"Ordered List": "Ordered list",
+			"Quote": "Quote",
+			"Redo": "Redo",
+			"Remove": "Remove",
+			"Replace": "Replace",
+			"Save Draft": "Save draft",
+			"Smilies": "Smilies",
+			"Something went wrong. Please try again.": "Something went wrong. Please try again or contact the administrator.",
+			"Spoiler": "Spoiler",
+			"Strikethrough": "Strike-through",
+			"Text": "Text",
+			"Toggle BB Code": "Toggle BB code",
+			"Underline": "Underline",
+			"Undo": "Undo",
+			"Unlink": "Unlink",
+			"Unordered List": "Unordered list",
+			"Update": "Update",
+			"Upload Image": "Upload image",
+			"Uploading": "Uploading",
+			"URL": "URL",
+			"Insert Table": "Insert table",
+			"Table Header": "Table header",
+			"Remove Table": "Remove table",
+			"Row": "Row",
+			"Column": "Column",
+			"Insert row above": "Insert row above",
+			"Insert row below": "Insert row below",
+			"Delete row": "Delete row",
+			"Insert column before": "Insert column before",
+			"Insert column after": "Insert column after",
+			"Delete column": "Delete column",
+			"Ctrl": "Ctrl",
+			"Shift": "Shift",
+			"Alt": "Alt",
+			"Insert Video": "Insert video",
+			"Upload Video": "Upload video",
+			"Width": "Width",
+			"Height": "Height",
+			"Change Size": "Change size",
+			"None": "None",
+			"Alternative Text": "Alt text",
+			"__lang end__": ""
+		}
+	</script>
+
+	<script class="js-editorCustom" type="application/json">
+		[]
+	</script>
+
+	<script class="js-xfSmilieMenu" type="text/template">
+		<div class="menu menu--emoji" data-menu="menu" aria-hidden="true"
+			data-href="/editor/smilies-emoji"
+			data-load-target=".js-xfSmilieMenuBody">
+			<div class="menu-content">
+				<div class="js-xfSmilieMenuBody">
+					<div class="menu-row">Loading…</div>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<textarea name="message_html"
+		class="input js-editor u-jsOnly"
+		data-xf-init="editor"
+		data-original-name="message"
+		data-buttons-remove="_align,_indent,xfList,undo,redo,xfInlineSpoiler,insertTable,xfBbCode"
+		style="visibility: hidden; height: 77px; "
+		aria-label="Rich text box"
+		 placeholder="Type /nick followed by the desired name to set your nickname." rows="1" maxlength="1000" data-min-height="40" id="_xfUid-1-1608472487"></textarea>
+
+	<input type="hidden" value="" data-bb-code="message" />
+
+	<noscript>
+		<textarea name="message" class="input" aria-label="Rich text box"></textarea>
+	</noscript>
+
+	<div class="js-previewContainer"></div>
+
+				</dd>
+			</dl>
+	</form>
+</div>
+	</div>
+</div>
+	<div class="block block--category block--category1">
+		<span class="u-anchorTarget" id="main-category.1"></span>
+		<div class="block-container">
+			<h2 class="block-header">
+				<a href="/.#main-category.1">Main Category</a>
+
+			</h2>
+			<div class="block-body">
+
+	<div class="node node--id2 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/trainers.2/" data-xf-init="element-tooltip" data-shortcut="node-description">Trainers</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">Trainers Which were made by MrAntiFun</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>2.6K</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>164.9K</dd>
+							</dl>
+						</div>
+
+				</div>
+
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>2.6K</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>164.9K</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/levy_.688268/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="688268" data-xf-init="member-tooltip" style="background-color: #339999; color: #061313">
+			<span class="avatar-u688268-s">L</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/car-mechanic-simulator-2018-trainer.13926/post-271359" class="node-extra-title" title="Car Mechanic Simulator 2018 Trainer">Car Mechanic Simulator 2018 Trainer</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-12-20T15:27:46+0200" data-time="1608470866" data-date-string="Dec 20, 2020" data-time-string="3:27 PM" title="Dec 20, 2020 at 3:27 PM">27 minutes ago</time></li>
+
+								<li class="node-extra-user"><a href="/members/levy_.688268/" class="username " dir="auto" data-user-id="688268" data-xf-init="member-tooltip">Levy_</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id4 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/trainers-requests.4/" data-xf-init="element-tooltip" data-shortcut="node-description">Trainers Requests</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">Post your requests here and we will make it happen as soon as possible.</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>5.6K</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>35.5K</dd>
+							</dl>
+						</div>
+
+				</div>
+
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>5.6K</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>35.5K</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/bgreed1983.2387281/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="2387281" data-xf-init="member-tooltip" style="background-color: #33cccc; color: #0f3d3d">
+			<span class="avatar-u2387281-s">B</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/streets-of-kamurocho.21826/post-271350" class="node-extra-title" title="Streets Of Kamurocho">Streets Of Kamurocho</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-12-19T21:36:05+0200" data-time="1608406565" data-date-string="Dec 19, 2020" data-time-string="9:36 PM" title="Dec 19, 2020 at 9:36 PM">Yesterday at 9:36 PM</time></li>
+
+								<li class="node-extra-user"><a href="/members/bgreed1983.2387281/" class="username " dir="auto" data-user-id="2387281" data-xf-init="member-tooltip">bgreed1983</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id22 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/trainers-updating-requests.22/" data-xf-init="element-tooltip" data-shortcut="node-description">Trainers Updating Requests</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">Post requests of trainers which stopped working.</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>940</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>2.6K</dd>
+							</dl>
+						</div>
+				</div>
+
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>940</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>2.6K</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/chris-traeger.892015/" class="avatar avatar--xs" data-user-id="892015" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/892/892015.jpg?1455840808" srcset="/data/avatars/m/892/892015.jpg?1455840808 2x" alt="Chris Traeger" class="avatar-u892015-s" />
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/project-hospital.21388/post-271332" class="node-extra-title" title="Project Hospital">Project Hospital</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-12-18T06:33:24+0200" data-time="1608266004" data-date-string="Dec 18, 2020" data-time-string="6:33 AM" title="Dec 18, 2020 at 6:33 AM">Friday at 6:33 AM</time></li>
+
+								<li class="node-extra-user"><a href="/members/chris-traeger.892015/" class="username " dir="auto" data-user-id="892015" data-xf-init="member-tooltip">Chris Traeger</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id14 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/donors-trainers-requests.14/" data-xf-init="element-tooltip" data-shortcut="node-description">Donors Trainers Requests</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">Trainers Requests For Donors</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>197</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>370</dd>
+							</dl>
+						</div>
+				</div>
+			</div>
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>197</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>370</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/gdf.383983/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="383983" data-xf-init="member-tooltip" style="background-color: #5cd6b8; color: #1a6653">
+			<span class="avatar-u383983-s">G</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/req-shoot-shoot-my-waifu-steam.21817/post-271297" class="node-extra-title" title="[REQ] Shoot Shoot My Waifu (Steam)">[REQ] Shoot Shoot My Waifu (Steam)</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-12-16T13:03:48+0200" data-time="1608116628" data-date-string="Dec 16, 2020" data-time-string="1:03 PM" title="Dec 16, 2020 at 1:03 PM">Wednesday at 1:03 PM</time></li>
+
+								<li class="node-extra-user"><a href="/members/gdf.383983/" class="username " dir="auto" data-user-id="383983" data-xf-init="member-tooltip">gdf</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id5 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+				<h3 class="node-title">
+					<a href="/forums/trainers-problems-reporting.5/" data-xf-init="element-tooltip" data-shortcut="node-description">Trainers Problems Reporting</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">Having a problem while using one of our trainers ? Let us know!.</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>884</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>2.2K</dd>
+							</dl>
+						</div>
+				</div>
+
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>884</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>2.2K</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/syehaza.2401485/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="2401485" data-xf-init="member-tooltip" style="background-color: #33ccad; color: #0f3d34">
+			<span class="avatar-u2401485-s">S</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/company-of-heroes-2-v4-0-0-2137.21823/post-271327" class="node-extra-title" title="company of heroes 2 v4.0.0.2137">company of heroes 2 v4.0.0.2137</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-12-18T02:05:31+0200" data-time="1608249931" data-date-string="Dec 18, 2020" data-time-string="2:05 AM" title="Dec 18, 2020 at 2:05 AM">Friday at 2:05 AM</time></li>
+
+								<li class="node-extra-user"><a href="/members/syehaza.2401485/" class="username " dir="auto" data-user-id="2401485" data-xf-init="member-tooltip">syehaza</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id19 node--depth2 node--forum node--read">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/rejected-trainers-requests.19/" data-xf-init="element-tooltip" data-shortcut="node-description">Rejected Trainers Requests</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">Requests that can't be fulfilled .</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>321</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>1.5K</dd>
+							</dl>
+						</div>
+
+				</div>
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>321</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>1.5K</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/wemod_chris.2375267/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="2375267" data-xf-init="member-tooltip" style="background-color: #ccebad; color: #73b82e">
+			<span class="avatar-u2375267-s">W</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/req-escape-from-tarkov.9634/post-263346" class="node-extra-title" title="[REQ] Escape From Tarkov">[REQ] Escape From Tarkov</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-01-31T19:24:21+0200" data-time="1580491461" data-date-string="Jan 31, 2020" data-time-string="7:24 PM" title="Jan 31, 2020 at 7:24 PM">Jan 31, 2020</time></li>
+
+								<li class="node-extra-user"><a href="/members/wemod_chris.2375267/" class="username " dir="auto" data-user-id="2375267" data-xf-init="member-tooltip"><span class="username--staff username--moderator">WeMod_Chris</span></a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id15 node--depth2 node--forum node--read">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/completed-trainers-requests.15/" data-xf-init="element-tooltip" data-shortcut="node-description">Completed  Trainers Requests</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">The trainers which has been made based on users requests.</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>4.2K</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>36.2K</dd>
+							</dl>
+						</div>
+				</div>
+			</div>
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>4.2K</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>36.2K</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/wemod_chris.2375267/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="2375267" data-xf-init="member-tooltip" style="background-color: #ccebad; color: #73b82e">
+			<span class="avatar-u2375267-s">W</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/req-g-t-f-o.20710/post-262737" class="node-extra-title" title="[REQ] G.T.F.O.">[REQ] G.T.F.O.</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-01-09T18:10:42+0200" data-time="1578586242" data-date-string="Jan 9, 2020" data-time-string="6:10 PM" title="Jan 9, 2020 at 6:10 PM">Jan 9, 2020</time></li>
+
+								<li class="node-extra-user"><a href="/members/wemod_chris.2375267/" class="username " dir="auto" data-user-id="2375267" data-xf-init="member-tooltip"><span class="username--staff username--moderator">WeMod_Chris</span></a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="block block--category block--category7">
+		<span class="u-anchorTarget" id="general-category.7"></span>
+		<div class="block-container">
+			<h2 class="block-header">
+				<a href="/.#general-category.7">General Category</a>
+
+			</h2>
+			<div class="block-body">
+
+	<div class="node node--id8 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/general-discussions.8/" data-xf-init="element-tooltip" data-shortcut="node-description">General Discussions</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">General Discussions</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>786</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>3.4K</dd>
+							</dl>
+						</div>
+
+				</div>
+
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>786</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>3.4K</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/ken-bassford.271251/" class="avatar avatar--xs" data-user-id="271251" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/271/271251.jpg?1430755866"  alt="Ken Bassford" class="avatar-u271251-s" />
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/welcome-from-wemod.19921/post-271345" class="node-extra-title" title="Welcome From WeMod!">Welcome From WeMod!</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-12-19T17:35:43+0200" data-time="1608392143" data-date-string="Dec 19, 2020" data-time-string="5:35 PM" title="Dec 19, 2020 at 5:35 PM">Yesterday at 5:35 PM</time></li>
+
+								<li class="node-extra-user"><a href="/members/ken-bassford.271251/" class="username " dir="auto" data-user-id="271251" data-xf-init="member-tooltip">Ken Bassford</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id9 node--depth2 node--forum node--read">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/programming-related.9/" data-xf-init="element-tooltip" data-shortcut="node-description">Programming Related</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">Programming Related</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>64</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>222</dd>
+							</dl>
+						</div>
+
+				</div>
+
+			</div>
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>64</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>222</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/timurasfbj.2397400/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="2397400" data-xf-init="member-tooltip" style="background-color: #5c7a1f; color: #b8db70">
+			<span class="avatar-u2397400-s">T</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/i-want-to-pay-someone-to-make-a-game-of-server-side.21151/post-269333" class="node-extra-title" title="I want to pay someone to make a game of server-side">I want to pay someone to make a game of server-side</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-09-18T18:43:29+0300" data-time="1600443809" data-date-string="Sep 18, 2020" data-time-string="6:43 PM" title="Sep 18, 2020 at 6:43 PM">Sep 18, 2020</time></li>
+
+								<li class="node-extra-user"><a href="/members/timurasfbj.2397400/" class="username " dir="auto" data-user-id="2397400" data-xf-init="member-tooltip">Timurasfbj</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id10 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/art-pictures.10/" data-xf-init="element-tooltip" data-shortcut="node-description">Art &amp; Pictures</a>
+				</h3>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>46</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>341</dd>
+							</dl>
+						</div>
+
+				</div>
+
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>46</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>341</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/maximuswok.2399723/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="2399723" data-xf-init="member-tooltip" style="background-color: #cc6666; color: #602020">
+			<span class="avatar-u2399723-s">M</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/using-proxies.20458/post-271130" class="node-extra-title" title="Using proxies">Using proxies</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-12-09T13:09:39+0200" data-time="1607512179" data-date-string="Dec 9, 2020" data-time-string="1:09 PM" title="Dec 9, 2020 at 1:09 PM">Dec 9, 2020</time></li>
+
+								<li class="node-extra-user"><a href="/members/maximuswok.2399723/" class="username " dir="auto" data-user-id="2399723" data-xf-init="member-tooltip">Maximuswok</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id11 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/videos-youtube.11/" data-xf-init="element-tooltip" data-shortcut="node-description">Videos &amp; YouTube</a>
+				</h3>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>41</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>135</dd>
+							</dl>
+						</div>
+				</div>
+
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>41</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>135</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/sucemateub.1173139/" class="avatar avatar--xs" data-user-id="1173139" data-xf-init="member-tooltip">
+			<img src="/data/avatars/s/1173/1173139.jpg?1526310073" srcset="/data/avatars/m/1173/1173139.jpg?1526310073 2x" alt="sucemateub" class="avatar-u1173139-s" />
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/cheathappens-is-trying-to-get-mrantifuns-youtube-channel-closed.4356/post-270867" class="node-extra-title" title="CheatHappens is trying to get MrAntiFuns youtube channel closed">CheatHappens is trying to get MrAntiFuns youtube channel closed</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-11-26T18:17:38+0200" data-time="1606407458" data-date-string="Nov 26, 2020" data-time-string="6:17 PM" title="Nov 26, 2020 at 6:17 PM">Nov 26, 2020</time></li>
+
+								<li class="node-extra-user"><a href="/members/sucemateub.1173139/" class="username " dir="auto" data-user-id="1173139" data-xf-init="member-tooltip">sucemateub</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="node node--id12 node--depth2 node--forum node--read">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/games-news-gaming-related.12/" data-xf-init="element-tooltip" data-shortcut="node-description">Games News &amp; Gaming Related</a>
+				</h3>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>509</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>953</dd>
+							</dl>
+						</div>
+
+				</div>
+
+			</div>
+
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>509</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>953</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/delly_69.2399456/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="2399456" data-xf-init="member-tooltip" style="background-color: #adebcc; color: #2eb873">
+			<span class="avatar-u2399456-s">D</span>
+		</a>
+
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/door-kickers-2-officially-announced-set-for-early-access-at-end-of-2016.6939/post-270503" class="node-extra-title" title="Door Kickers 2 officially announced, set for Early Access at end of 2016">Door Kickers 2 officially announced, set for Early Access at end of 2016</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-11-08T18:33:41+0200" data-time="1604853221" data-date-string="Nov 8, 2020" data-time-string="6:33 PM" title="Nov 8, 2020 at 6:33 PM">Nov 8, 2020</time></li>
+
+								<li class="node-extra-user"><a href="/members/delly_69.2399456/" class="username " dir="auto" data-user-id="2399456" data-xf-init="member-tooltip">Delly_69</a></li>
+
+						</ul>
+					</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="node node--id13 node--depth2 node--forum node--unread">
+		<div class="node-body">
+			<span class="node-icon" aria-hidden="true"><i></i></span>
+			<div class="node-main js-nodeMain">
+
+
+
+				<h3 class="node-title">
+					<a href="/forums/suggestions-and-ideas.13/" data-xf-init="element-tooltip" data-shortcut="node-description">Suggestions and Ideas</a>
+				</h3>
+
+					<div class="node-description node-description--tooltip js-nodeDescTooltip">Users Suggestions and Ideas</div>
+
+
+				<div class="node-meta">
+
+						<div class="node-statsMeta">
+							<dl class="pairs pairs--inline">
+								<dt>Threads</dt>
+								<dd>167</dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>Messages</dt>
+								<dd>468</dd>
+							</dl>
+						</div>
+				</div>
+			</div>
+
+				<div class="node-stats">
+					<dl class="pairs pairs--rows">
+						<dt>Threads</dt>
+						<dd>167</dd>
+					</dl>
+					<dl class="pairs pairs--rows">
+						<dt>Messages</dt>
+						<dd>468</dd>
+					</dl>
+				</div>
+
+
+			<div class="node-extra">
+
+					<div class="node-extra-icon">
+
+							<a href="/members/maximusuom.2398380/" class="avatar avatar--xs avatar--default avatar--default--dynamic" data-user-id="2398380" data-xf-init="member-tooltip" style="background-color: #29a329; color: #051405">
+			<span class="avatar-u2398380-s">M</span>
+		</a>
+					</div>
+					<div class="node-extra-row">
+
+							<a href="/threads/leaving.21047/post-271117" class="node-extra-title" title="Leaving :(">Leaving :(</a>
+
+					</div>
+					<div class="node-extra-row">
+						<ul class="listInline listInline--bullet">
+							<li><time  class="node-extra-date u-dt" dir="auto" datetime="2020-12-08T19:56:33+0200" data-time="1607450193" data-date-string="Dec 8, 2020" data-time-string="7:56 PM" title="Dec 8, 2020 at 7:56 PM">Dec 8, 2020</time></li>
+
+								<li class="node-extra-user"><a href="/members/maximusuom.2398380/" class="username " dir="auto" data-user-id="2398380" data-xf-init="member-tooltip">Maximusuom</a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+			</div>
+				<div class="p-body-sidebar">
+
+						<div class="block" data-widget-section="onlineNow" data-widget-id="6" data-widget-key="forum_overview_members_online" data-widget-definition="members_online">
+	<div class="block-container">
+		<h3 class="block-minorHeader"><a href="/online/">Members online</a></h3>
+		<div class="block-body">
+
+				<div class="block-row block-row--minor">
+
+
+
+					<ul class="listInline listInline--comma">
+						<li><a href="/members/gio_ortola.269604/" class="username " dir="auto" data-user-id="269604" data-xf-init="member-tooltip"><span class="username--style2">gio_ortola</span></a></li><li><a href="/members/gottlieb.560764/" class="username " dir="auto" data-user-id="560764" data-xf-init="member-tooltip"><span class="username--style2">Gottlieb</span></a></li><li><a href="/members/telktera.307939/" class="username " dir="auto" data-user-id="307939" data-xf-init="member-tooltip"><span class="username--style2">Telktera</span></a></li><li><a href="/members/pyrom300.1648985/" class="username " dir="auto" data-user-id="1648985" data-xf-init="member-tooltip"><span class="username--style2">Pyrom300</span></a></li><li><a href="/members/antonis9090.192437/" class="username " dir="auto" data-user-id="192437" data-xf-init="member-tooltip"><span class="username--style2">antonis9090</span></a></li><li><a href="/members/virusrat.690647/" class="username " dir="auto" data-user-id="690647" data-xf-init="member-tooltip"><span class="username--style2">ViRusRat</span></a></li><li><a href="/members/angelo1990.74514/" class="username " dir="auto" data-user-id="74514" data-xf-init="member-tooltip"><span class="username--style2">Angelo1990</span></a></li><li><a href="/members/subjugatoriii.317347/" class="username " dir="auto" data-user-id="317347" data-xf-init="member-tooltip"><span class="username--style2">SubjugatorIII</span></a></li><li><a href="/members/greggel.1523525/" class="username " dir="auto" data-user-id="1523525" data-xf-init="member-tooltip"><span class="username--style2">Greggel</span></a></li><li><a href="/members/radik57.11686/" class="username " dir="auto" data-user-id="11686" data-xf-init="member-tooltip"><span class="username--style2">radik57</span></a></li><li><a href="/members/zeliek.2210301/" class="username " dir="auto" data-user-id="2210301" data-xf-init="member-tooltip"><span class="username--style2">Zeliek</span></a></li><li><a href="/members/levy_.688268/" class="username " dir="auto" data-user-id="688268" data-xf-init="member-tooltip"><span class="username--style2">Levy_</span></a></li><li><a href="/members/tropoebus.873531/" class="username " dir="auto" data-user-id="873531" data-xf-init="member-tooltip"><span class="username--style2">Tropoebus</span></a></li><li><a href="/members/onanism.121420/" class="username " dir="auto" data-user-id="121420" data-xf-init="member-tooltip"><span class="username--style2">onanism</span></a></li><li><a href="/members/progamer41.1814339/" class="username " dir="auto" data-user-id="1814339" data-xf-init="member-tooltip"><span class="username--style2">ProGamer41</span></a></li><li><a href="/members/neman.122562/" class="username " dir="auto" data-user-id="122562" data-xf-init="member-tooltip"><span class="username--style2">Neman</span></a></li><li><a href="/members/onex91.571765/" class="username " dir="auto" data-user-id="571765" data-xf-init="member-tooltip"><span class="username--style2">onex91</span></a></li><li><a href="/members/paul1966.901673/" class="username " dir="auto" data-user-id="901673" data-xf-init="member-tooltip"><span class="username--style2">paul1966</span></a></li><li><a href="/members/lingpu.928729/" class="username " dir="auto" data-user-id="928729" data-xf-init="member-tooltip"><span class="username--style2">lingpu</span></a></li>
+					</ul>
+
+			</div>
+		</div>
+		<div class="block-footer">
+			<span class="block-footer-counter">Total:&nbsp;1,536 (members:&nbsp;21, guests:&nbsp;1,515)</span>
+		</div>
+	</div>
+</div>
+<div class="block" data-widget-id="7" data-widget-key="forum_overview_forum_statistics" data-widget-definition="forum_statistics">
+	<div class="block-container">
+		<h3 class="block-minorHeader">Forum statistics</h3>
+		<div class="block-body block-row">
+			<dl class="pairs pairs--justified">
+				<dt>Threads</dt>
+				<dd>16,641</dd>
+			</dl>
+
+			<dl class="pairs pairs--justified">
+				<dt>Messages</dt>
+				<dd>251,270</dd>
+			</dl>
+
+			<dl class="pairs pairs--justified">
+				<dt>Members</dt>
+				<dd>2,396,017</dd>
+			</dl>
+
+			<dl class="pairs pairs--justified">
+				<dt>Latest member</dt>
+				<dd><a href="/members/kariye2761.2401627/" class="username " dir="auto" data-user-id="2401627" data-xf-init="member-tooltip">kariye2761</a></dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+	<div class="block" data-widget-id="8" data-widget-key="forum_overview_share_page" data-widget-definition="share_page">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Share this page</h3>
+			<div class="block-body block-row">
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="">
+
+
+			<div class="shareButtons-buttons">
+
+
+
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--facebook" data-href="https://www.facebook.com/sharer.php?u={url}">
+							<i aria-hidden="true"></i>
+							<span>Facebook</span>
+						</a>
+
+
+
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--reddit" data-href="https://reddit.com/submit?url={url}&amp;title={title}">
+							<i aria-hidden="true"></i>
+							<span>Reddit</span>
+						</a>
+
+
+
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--pinterest" data-href="https://pinterest.com/pin/create/bookmarklet/?url={url}&amp;description={title}">
+							<i aria-hidden="true"></i>
+							<span>Pinterest</span>
+						</a>
+
+
+
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--tumblr" data-href="https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&amp;title={title}">
+							<i aria-hidden="true"></i>
+							<span>Tumblr</span>
+						</a>
+
+
+
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--whatsApp" data-href="https://api.whatsapp.com/send?text={title}&nbsp;{url}">
+							<i aria-hidden="true"></i>
+							<span>WhatsApp</span>
+						</a>
+
+
+
+						<a class="shareButtons-button shareButtons-button--email" data-href="mailto:?subject={title}&amp;body={url}">
+							<i aria-hidden="true"></i>
+							<span>Email</span>
+						</a>
+
+
+
+						<a class="shareButtons-button shareButtons-button--link is-hidden" data-clipboard="{url}">
+							<i aria-hidden="true"></i>
+							<span>Link</span>
+						</a>
+			</div>
+		</div>
+			</div>
+		</div>
+	</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<footer class="p-footer" id="footer">
+	<div class="p-footer-inner">
+
+		<div class="p-footer-row">
+
+			<div class="p-footer-row-opposite">
+				<ul class="p-footer-linkList">
+
+                        <li><a href="/misc/contact/" data-xf-click="overlay">Contact us</a></li>
+
+						<li><a href="/help/terms/">Terms and rules</a></li>
+
+						<li><a href="pivacypolicy.php">Privacy policy</a></li>
+
+						<li><a href="/help/">Help</a></li>
+
+					<li><a href="/forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss" aria-hidden="true"></i><span class="u-srOnly">RSS</span></span></a></li>
+				</ul>
+			</div>
+		</div>
+
+			<div class="p-footer-copyright">
+
+				<a href="https://xenforo.com" class="u-concealed" dir="ltr" target="_blank">Forum software by XenForo<sup>&reg;</sup> <span class="copyright">&copy; 2010-2019 XenForo Ltd.</span></a>
+
+
+			</div>
+	</div>
+</footer>
+
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+		<ul class="notices notices--bottom_fixer  js-notices"
+			data-xf-init="notices"
+			data-type="bottom_fixer"
+			data-scroll-interval="6">
+
+	<li class="notice js-notice notice--primary notice--cookie"
+		data-notice-id="-1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss="0"
+		data-visibility="">
+
+		<div class="notice-content">
+			<div class="u-alignCenter">
+	This site uses cookies to help personalise content, tailor your experience and to keep you logged in if you register.<br />
+By continuing to use this site, you are consenting to our use of cookies.
+</div>
+
+<div class="u-inputSpacer u-alignCenter">
+	<a href="/account/dismiss-notice" class="js-noticeDismiss button--notice button button--icon button--icon--confirm"><span class="button-text">Accept</span></a>
+	<a href="/help/cookies" class="button--notice button"><span class="button-text">Learn more…</span></a>
+</div>
+		</div>
+	</li>
+		</ul>
+</div>
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="up">
+		<a href="#top" class="button--scroll button" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up" aria-hidden="true"></i><span class="u-srOnly">Top</span></span></a>
+
+	</div>
+
+	<script src="/js/vendor/jquery/jquery-3.3.1.min.js?_v=6e2bbd35"></script>
+	<script src="/js/vendor/vendor-compiled.js?_v=6e2bbd35"></script>
+	<script src="/js/xf/core-compiled.js?_v=6e2bbd35"></script>
+	<script src="/js/siropu/chat/core.min.js?_v=6e2bbd35"></script>
+<script src="/js/xf/editor-compiled.js?_v=6e2bbd35"></script>
+<script src="/js/xf/notice.min.js?_v=6e2bbd35"></script>
+<script>
+
+	XF.SiropuChat.Core = XF.extend(XF.SiropuChat.Core, {
+	userId: 0,
+	canUseChat: false,
+	serverTime: 1608472487,
+	channel: 'room',
+	roomId: 1,
+	lastId: {"1":15394},
+	convId: 0,
+	convUnread: [],
+	convOnly: 0,
+	convItems: [],
+	guestRoom: 1,
+	messageDisplayLimit: 25,
+	notificationTimeout: 5000,
+	refreshActive: 5000,
+	refreshActiveHidden: 15000,
+	refreshInactive: 30000,
+	refreshInactiveHidden: 60000,
+	tabNotification: true,
+	inverse: 0,
+	floodCheck: 1000,
+	roomFloodCheck: 0,
+	bypassFloodCheck: false,
+	displayNavCount: true,
+	dynamicTitle: true,
+	activeUsers: [],
+	commands: {"join":"join","whisper":"whisper"},
+	loadMoreButton: {room: true, conv: true},
+	loadRooms: false,
+	forceAutoScroll: false
+});
+
+jQuery.extend(XF.phrases, {
+	siropu_chat_write_public_message: "Write a public message...",
+	siropu_chat_write_private_message: "Write a private message...",
+	siropu_chat_new_message: "Chat: New message",
+	siropu_chat_new_public_message: "Chat: New public message",
+	siropu_chat_new_whisper_message: "Chat: New whisper message",
+	siropu_chat_new_private_message: "Chat: New private message",
+	siropu_chat_posting_message: "Posting message...",
+	siropu_chat_please_wait: "Please wait...",
+	siropu_chat_please_wait_x_seconds: "Please wait 1 seconds...",
+	siropu_chat_no_response: "The server has not responded in time. :(",
+	siropu_chat_loading_conversation: "Loading conversation...",
+	siropu_chat_confirm_conversation_leave: "re you sure you want to leave this conversation?",
+	siropu_chat_settings_change_reload_page: "Please reload the page to see the changes.",
+	siropu_chat_room_is_read_only: "This room is read only.",
+	siropu_chat_no_conversations_started: "You haven\'t started any conversations yet.",
+	siropu_chat_load_more_messages: "Load more messages?",
+	siropu_chat_all_messages_have_been_loaded: "All messages have been loaded.",
+	siropu_chat_loading_conversation_messages: "Loading conversation messages...",
+	siropu_chat_has_been_disabled: "Chat has been disabled. You can enable it again from the same location.",
+	siropu_chat_do_not_have_permission_to_use: "You do not have the permission to use the chat.",
+	siropu_chat_no_one_is_chatting: "No one is chatting at the moment."
+});
+
+</script>
+
+
+	<script>
+		XF.SiropuChatPopup = XF.Click.newHandler({
+			eventNameSpace: 'SiropuChatPopup',
+
+			init: function() {},
+
+			click: function(e)
+			{
+				e.preventDefault();
+
+				var siropuChatWindowPopup;
+				var url = e.target.href ? e.target.href : this.$target.attr('href');
+
+				if (siropuChatWindowPopup === undefined || siropuChatWindowPopup.closed)
+				{
+					siropuChatWindowPopup = window.open(url, 'siropuChatWindowPopup', 'width=800,height=500');
+				}
+				else
+				{
+					siropuChatWindowPopup.focus();
+				};
+			}
+		});
+
+		XF.Click.register('siropu-chat-popup', 'XF.SiropuChatPopup');
+	</script>
+
+	<script>
+		jQuery.extend(true, XF.config, {
+			//
+			userId: 0,
+			enablePush: false,
+			pushAppServerKey: '',
+			url: {
+				fullBase: 'https://ulrikwf.me/',
+				basePath: '/',
+				css: '/css.php?css=__SENTINEL__&s=9&l=1&d=1570483551',
+				keepAlive: '/login/keep-alive'
+			},
+			cookie: {
+				path: '/',
+				domain: 'ulrikwf.me',
+				prefix: 'maf_',
+				secure: true
+			},
+			csrf: '1608472487,2032165c81349d20cc41d54ffd31719c',
+			js: {"\/js\/siropu\/chat\/core.min.js?_v=6e2bbd35":true,"\/js\/xf\/editor-compiled.js?_v=6e2bbd35":true,"\/js\/xf\/notice.min.js?_v=6e2bbd35":true},
+			css: {"public:editor.less":true,"public:node_list.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:siropu_chat.less":true,"public:extra.less":true},
+			time: {
+				now: 1608472487,
+				today: 1608415200,
+				todayDow: 0
+			},
+			borderSizeFeature: '3px',
+			fontAwesomeWeight: 'r',
+			enableRtnProtect: true,
+			enableFormSubmitSticky: true,
+			uploadMaxFilesize: 8388608,
+			allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+			shortcodeToEmoji: true,
+			visitorCounts: {
+				conversations_unread: '0',
+				alerts_unread: '0',
+				total_unread: '0',
+				title_count: true,
+				icon_indicator: true
+			},
+			jsState: {},
+			publicMetadataLogoUrl: '',
+			publicPushBadgeUrl: 'https://mrantifun.net/styles/default/xenforo/bell.png'
+		});
+
+		jQuery.extend(XF.phrases, {
+			//
+			date_x_at_time_y: "{date} at {time}",
+			day_x_at_time_y:  "{day} at {time}",
+			yesterday_at_x:   "Yesterday at {time}",
+			x_minutes_ago:    "{minutes} minutes ago",
+			one_minute_ago:   "1 minute ago",
+			a_moment_ago:     "A moment ago",
+			today_at_x:       "Today at {time}",
+			in_a_moment:      "In a moment",
+			in_a_minute:      "In a minute",
+			in_x_minutes:     "In {minutes} minutes",
+			later_today_at_x: "Later today at {time}",
+			tomorrow_at_x:    "Tomorrow at {time}",
+
+			day0: "Sunday",
+			day1: "Monday",
+			day2: "Tuesday",
+			day3: "Wednesday",
+			day4: "Thursday",
+			day5: "Friday",
+			day6: "Saturday",
+
+			dayShort0: "Sun",
+			dayShort1: "Mon",
+			dayShort2: "Tue",
+			dayShort3: "Wed",
+			dayShort4: "Thu",
+			dayShort5: "Fri",
+			dayShort6: "Sat",
+
+			month0: "January",
+			month1: "February",
+			month2: "March",
+			month3: "April",
+			month4: "May",
+			month5: "June",
+			month6: "July",
+			month7: "August",
+			month8: "September",
+			month9: "October",
+			month10: "November",
+			month11: "December",
+
+			active_user_changed_reload_page: "The active user has changed. Reload the page for the latest version.",
+			server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+			oops_we_ran_into_some_problems: "Oops! We ran into some problems.",
+			oops_we_ran_into_some_problems_more_details_console: "Oops! We ran into some problems. Please try again later. More error details may be in the browser console.",
+			file_too_large_to_upload: "The file is too large to be uploaded.",
+			uploaded_file_is_too_large_for_server_to_process: "The uploaded file is too large for the server to process.",
+			files_being_uploaded_are_you_sure: "Files are still being uploaded. Are you sure you want to submit this form?",
+			attach: "Attach files",
+			rich_text_box: "Rich text box",
+			close: "Close",
+			link_copied_to_clipboard: "Link copied to clipboard.",
+			text_copied_to_clipboard: "Text copied to clipboard.",
+			loading: "Loading…",
+
+			processing: "Processing",
+			'processing...': "Processing…",
+
+			showing_x_of_y_items: "Showing {count} of {total} items",
+			showing_all_items: "Showing all items",
+			no_items_to_display: "No items to display",
+
+			push_enable_notification_title: "Push notifications enabled successfully at MrAntiFun, PC Video Game Trainers ,Cheats and mods",
+			push_enable_notification_body: "Thank you for enabling push notifications!"
+		});
+	</script>
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"url": "https://ulrikwf.me/",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://ulrikwf.me/SubPages/Forum/search/search?keywords={search_keywords}",
+				"query-input": "required name=search_keywords"
+			}
+		}
+		</script>
+
+	<script type="text/template" id="xfReactTooltipTemplate">
+		<div class="tooltip-content-inner">
+			<div class="reactTooltip">
+
+					<a href="#" class="reaction reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Like" title="Like" data-xf-init="tooltip" /></a>
+
+					<a href="#" class="reaction reaction--2" data-reaction-id="2"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Love" title="Love" data-xf-init="tooltip" /></a>
+
+					<a href="#" class="reaction reaction--3" data-reaction-id="3"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Haha" title="Haha" data-xf-init="tooltip" /></a>
+
+					<a href="#" class="reaction reaction--4" data-reaction-id="4"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Wow" title="Wow" data-xf-init="tooltip" /></a>
+
+					<a href="#" class="reaction reaction--5" data-reaction-id="5"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Sad" title="Sad" data-xf-init="tooltip" /></a>
+
+					<a href="#" class="reaction reaction--6" data-reaction-id="6"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Angry" title="Angry" data-xf-init="tooltip" /></a>
+
+			</div>
+		</div>
+	</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
