@@ -4,55 +4,313 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body data-template="forum_list">
+    <div class="p-pageWrapper" id="top">
 
-    <div class="p-body">
+        <header class="p-header" id="header">
+            <div class="p-header-inner">
+                <div class="p-header-content">
+                    <div class="p-header-logo p-header-logo--image">
+                        <a href="/">
+                            <img src="/styles/png/logo.png" alt="Ulrik, Forum">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-        <div class="p-body-main p-body-main--withSidebar">
-
-            <div class="p-body-content">
-
-                <div class="p-body-pageContent">
-
-                    <div class="block block--category block--category1">
-                        <span class="u-anchorTarget" id="main--category1"></span>
-                        <div class="block-container">
-
-                            <h2 class="block-header">
-                                <a href="/.#main-category1">Main Category</a>
-                            </h2>
-
-                            <div class="block-body">
-                                <div class="node node--id2 node--depth2 node--forum">
-                                    <div class="block-body">
-                                        <span class="node-icon" aria-hidden="true"><i>::before</i></span>
-                                        <div class="node-main js-nodeMain">
-                                            <h3 class="node-title">
-                                                <a href="/forums/Trainers.2" data-xf-init="element-tooltip"
-                                                   data-shortcut="node-description" id="js-XFUniqueID53">
-                                                    Trainers
-                                                </a>
-                                            </h3>
-                                            <div class="node-description node-description--tooltip js-nodeDescTooltip">
-                                                Trainers which are made by Ulrik
-                                            </div>
-                                            <div class="node-meta">
-                                                <div class="node-statsMeta"></div>
+        <div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+            <nav class="p-nav">
+                <div class="p-nav-inner">
+                    <a class="p-nav-menuTrigger" data-xf-click="off-canvas"
+                       data-menu=".js-headerOffCanvasMenu" role="button" tabindex="0">
+                        <i aria-hidden="true"></i>
+                        <span class="p-nav-menuText">Menu</span>
+                    </a>
+                    <div class="p-nav-smallLogo">
+                        <a href="/">
+                            <img src="/styles/png/logo.png" alt="Ulrik, Forum">
+                        </a>
+                    </div>
+                    <div class="p-nav-scroller hScroller" data-xf-init="h-scroller"
+                         data-auto-scroll=".p-navEl.is-selected">
+                        <div class="hScroller-scroll is-calculated" style="margin-bottom: -47px;">
+                            <ul class="p-nav-list js-offCanvasNavSource">
+                                <li>
+                                    <div class="p-navEl is-selected" data-has-children="true">
+                                        <a href="/" class="p-navEl-link p-navEl-link--splitMenu" data-nav-id="forums">
+                                            Forums</a>
+                                        <a data-xf-key="1" data-xf-click="menu" data-menu-pos-ref="< .p-navEl"
+                                           class="p-navEl-splitTrigger" role="button" tabindex="0"
+                                           aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
+                                        <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+                                            <div class="menu-content">
+                                                <a href="/whats-new/posts/"
+                                                   class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+                                                   data-nav-id="newPosts">New posts</a>
+                                                <a href="/search/?type=post"
+                                                   class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+                                                   data-nav-id="searchForums">Search forums</a>
                                             </div>
                                         </div>
                                     </div>
+                                </li>
+                                <li>
+                                    <a href="/whats-new/" class="p-navEl-link p-navEl-link--splitMenu "
+                                       data-nav-id="whatsNew">What's new</a>
+                                    <a data-xf-key="2" data-xf-click="menu" data-menu-pos-ref="< .p-navEl"
+                                       class="p-navEl-splitTrigger" role="button" tabindex="0"
+                                       aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
+                                    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+                                        <div class="menu-content">
+                                            <a href="/whats-new/posts/"
+                                               class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow"
+                                               data-nav-id="whatsNewPosts">New posts</a>
+                                            <a href="/whats-new/latest-activity"
+                                               class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow"
+                                               data-nav-id="latestActivity">Latest activity</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-navEl " data-has-children="true">
+                                        <a href="/members/" class="p-navEl-link p-navEl-link--splitMenu "
+                                           data-nav-id="members">Members</a>
+                                        <a data-xf-key="3" data-xf-click="menu" data-menu-pos-ref="< .p-navEl"
+                                           class="p-navEl-splitTrigger" role="button" tabindex="0"
+                                           aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
+                                        <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+                                            <div class="menu-content">
+                                                <a href="/online/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+                                                   data-nav-id="currentVisitors">Current visitors</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-navEl ">
+                                        <a href="/chat/" class="p-navEl-link " data-xf-key="4" data-nav-id="Chat">
+                                            <span class="badge badge--highlighted">0</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-navEl ">
+                                        <a href="/list-of-all-trainers.503/"
+                                           class="p-navEl-link " data-xf-key="5" data-nav-id="Current_Trainers">
+                                            Trainers List</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-navEl ">
+                                        <a href="/forum-trainers-faq.305/" class="p-navEl-link " data-xf-key="6"
+                                           data-nav-id="faq">FAQ</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <i class="hScroller-action hScroller-action--end" aria-hidden="true"></i>
+                        <i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
+                    </div>
+                    <div class="p-nav-opposite">
+                        <div class="p-navgroup p-account p-navgroup--guest">
+                            <a href="/login/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+                               data-xf-click="overlay" data-follow-redirects="on">
+                                <span class="p-navgroup-linkText">Log in</span>
+                            </a>
+                            <a href="/register/"
+                               class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+                               data-xf-click="overlay" data-follow-redirects="on">
+                                <span class="p-navgroup-linkText">Register</span>
+                            </a>
 
+                        </div>
+                        <div class="p-navgroup p-discovery">
+                            <a href="/whats-new/"
+                               class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+                               aria-label="What's new" title="What's new">
+                                <i aria-hidden="true"></i>
+                                <span class="p-navgroup-linkText">What's new</span>
+                            </a>
+                            <a href="/search/"
+                               class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+                               data-xf-click="menu" data-xf-key="/" aria-label="Search" aria-expanded="false"
+                               aria-haspopup="true" title="Search">
+                                <i aria-hidden="true"></i>
+                                <span class="p-navgroup-linkText">Search</span>
+                            </a>
+                            <div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+                                <form action="/search/search" method="post" class="menu-content"
+                                      data-xf-init="quick-search">
+                                    <h3 class="menu-header">Search</h3>
+                                    <div class="menu-row">
+                                        <input type="text" class="input" name="keywords" placeholder="Search..."
+                                               aria-label="Search" data-menu-autofocus="true">
+                                    </div>
+                                    <div class="menu-row">
+                                        <label class="menu-row">
+                                            <input type="checkbox" name="c[title_only]" value="1">
+                                            <i aria-hidden="true"></i>
+                                            <span class="iconic-label">Search titles only</span>
+                                        </label>
+                                    </div>
+                                    <div class="menu-row">
+                                        <div class="inputGroup">
+                                            <span class="inputGroup-text" id="ctrl_search_menu_by_member">By:</span>
+                                            <input type="text" class="input" name="c[users]"
+                                                   data-xf-init="auto-complete" placeholder="Member"
+                                                   aria-labelledby="ctrl_search_menu_by_member" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="menu-footer">
+                                        <span class="menu-footer-controls">
+                                            <button type="submit" class="button--primary button button--icon button--icon--search">
+                                                <span class="button-text">Search</span>
+                                            </button>
+                                            <a href="/search/" class="button">
+                                                <span class="button-text">Advanced search</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <input type="hidden" name="_xfToken"
+                                           value="1608476150,3b8c6a2f3f41ee2641c1a3d7a0979cff">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="p-sectionLinks">
+            <div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+                <div class="hScroller-scroll is-calculated" style="margin-bottom-47px;">
+                    <ul class="p-sectionLinks-list">
+                        <li>
+                            <div class="p-navEl ">
+                                <a href="whats-new/posts/" class="p-navEl-link " data-xf-key="alt+1"
+                                   data-nav-id="newPosts">New Posts</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="p-navEl ">
+                                <a href="/search/?type=post" class="p-navEl-link " data-xf-key="alt+2"
+                                   data-nav-id="searchForums">Search forums</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <i class="hScroller-action hScroller-action--end" aria-hidden="true"></i>
+                <i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true"
+             data-ocm-builder="navigation">
+            <div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+            <div class="offCanvasMenu-content">
+                <div class="offCanvasMenu-header">
+                    "
+			                    Menu
+                                "
+                    <a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0"
+                       aria-label="Close"></a>
+
+                </div>
+                <div class="p-offCanvasRegisterLink">
+                    <div class="offCanvasMenu-linkHolder">
+                        <a href="/login/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+						                            Log in
+					                            </a>
+                    </div>
+                    <hr class="offCanvasMenu-separator">
+                    <div class="offCanvasMenu-linkHolder">
+                        <a href="/register/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							                            Register
+						                            </a>
+
+                    </div>
+                    <hr class="offCanvasMenu-separator">
+                </div>
+                <div class="js-offCanvasNavTarget"></div>
+            </div>
+        </div>
+
+        <div class="p-body">
+            <div class="p-body-inner">
+                <div class="p-body-header">
+                    <div class="p-title ">
+                        <h1 class="p-title-value">Ulrik, Forum</h1>
+                        <div class="p-title-pageAction">
+                            <a href="/whats-new/posts/" class="button button--icon button--icon--bolt">
+                                <span class="button-text">
+                                    "
+                                                    New Posts
+                                                "
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-body-main p-body-main--withSidebar">
+
+                    <div class="p-body-content">
+
+                        <div class="p-body-pageContent">
+                            <div id="Chat" class="block chatAboveForumList" data-active="false" data-xf-init="chat">
+                                <div class="block-container">
+                                    <div id="chatHeader" class="block-header"></div>
+                                    <div id="chatContent"></div>
+                                    <div id="chatEditor"></div>
+                                </div>
+                            </div>
+                            <div class="block block--category block--category1">
+                                <span class="u-anchorTarget" id="main--category1"></span>
+                                <div class="block-container">
+
+                                    <h2 class="block-header">
+                                        <a href="/.#main-category1">Main Category</a>
+                                    </h2>
+
+                                    <div class="block-body">
+                                        <div class="node node--id2 node--depth2 node--forum">
+                                            <div class="block-body">
+                                                <span class="node-icon" aria-hidden="true"><i>::before</i></span>
+                                                <div class="node-main js-nodeMain">
+                                                    <h3 class="node-title">
+                                                        <a href="/forums/Trainers.2" data-xf-init="element-tooltip"
+                                                   data-shortcut="node-description" id="js-XFUniqueID53">
+                                                    Trainers
+                                                        </a>
+                                                    </h3>
+                                                    <div class="node-description node-description--tooltip js-nodeDescTooltip">
+                                                Trainers which are made by Ulrik
+                                                    </div>
+                                                    <div class="node-meta">
+                                                        <div class="node-statsMeta"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block block--category block--category7">
+                                <span class="u-anchorTarget" id="general-category.7"></span>
+                                <div class="block-container">
+                                    <h2 class="block-header">
+                                        <a href="/.#general-category.7">General Category</a>
+                                    </h2>
+                                    <div class="block-body">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="block block--category block--category7"></div>
                 </div>
             </div>
-
         </div>
-
-
     </div>
 
 </body>
